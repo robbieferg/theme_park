@@ -64,4 +64,9 @@ public class ThemeParkTest {
         themePark.removeStall(iceCreamStall);
         assertEquals(2, themePark.getStalls().size());
     }
+
+    @Test
+    public void canGetAllReviewed() {
+        assertEquals(7, themePark.getAllReviewed().size());
+    }
 }

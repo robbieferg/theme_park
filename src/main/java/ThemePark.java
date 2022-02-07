@@ -1,4 +1,5 @@
 import attractions.Attraction;
+import behaviours.IReviewed;
 import org.w3c.dom.Attr;
 import stalls.Stall;
 
@@ -35,6 +36,14 @@ public class ThemePark {
 
     public void removeStall(Stall stall) {
         stalls.remove(stall);
+    }
+
+    public ArrayList<IReviewed> getAllReviewed() {
+        ArrayList<IReviewed> reviewed = new ArrayList<IReviewed>();
+        reviewed.addAll(attractions);
+        reviewed.addAll(stalls);
+        return reviewed;
+
     }
 
 
